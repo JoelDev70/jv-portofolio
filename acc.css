@@ -6,7 +6,7 @@
         /* font-family:'Poppins', sans-serif; */
 
 }
- /* #loader{
+#loader{
     position: fixed;
     top: 0;
     left: 0;
@@ -24,27 +24,13 @@
     border-radius: 50%;
     width: 60%;
     height: 60%;
-    animation: spin 5s linear;
-} 
-@keyframes spinner{
-    0%{
-        transform: rotate(10deg);}
-    20%{
-        transform: rotate(30deg);}
-   40%{
-        transform: rotate(100deg);}
-    60%{
-        transform: rotate(360deg);}
-} */
- .reveal{
-    /* opacity: 0.08; */
-    transform: translateY(50px);
-    /* transition: all 0.8s ease;    */
+    animation: spin 2s linear;
 }
-
- .reveal .active{
-    opacity: 2;
-    transform: translateY(0px);
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);}
+    100%{
+        transform: rotate(360deg);}
 }
 body{
 
@@ -72,11 +58,11 @@ header{
     height: 30px;
     border-radius: 50%;
 }
-/* .navBar {
+.navBar {
      display: flex;
      justify-content: center;
      align-items: center;
-} */
+}
 .navBar .btnResponsive {
     display: none;
     color: aliceblue;
@@ -86,7 +72,7 @@ header{
 #navigation{
     bottom: 0;
     padding: 20px;
-    border-radius: 15px;
+   border-radius: 15px;
     align-items: center;
     display: flex;
     position: fixed;
@@ -105,19 +91,13 @@ header{
     list-style-type: none;
     font-size: 20px;
     }
-
 .onglets a{
     font-size: 25px;
     text-decoration: none;
     font-weight: bold;
     color: aliceblue;
 }
-.onglets a:hover {
-    font-size: 24px;
-    text-decoration:line-through;
-    color: rgb(204, 156, 248);  
-    transition: 0.7s ease-in-out; 
-}
+
 .btnContacter a{
     background: rgb(43, 34, 51);
     text-decoration: none;
@@ -125,11 +105,6 @@ header{
     border-radius: 5px;
     color: rgb(132, 111, 248);
     font-weight: bold;
-}
-.btnContacter a:hover{
-    background: rgb(139, 110, 165);
-    color: rgb(244, 243, 247);
-    transition: 0.5s ease-in-out;
 }
 #home{
     display: flex;
@@ -183,24 +158,12 @@ header{
     height: 30px;
     margin: 5px;
 }
-.reseau img:hover{
-    width: 33px;
-    height: 33px;
-    transition: 0.5s ease-in-out;
-}
 
 .photo img{
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background:rgb(175, 154, 194);
-}
-.photo img:hover{
-      width: 210px;
-    height: 210px;
-    transition: 0.5s ease-in-out;
-    transform: translateX(5px);
-    background:rgb(155, 128, 179);
 }
 .connect {
     display: flex;
@@ -281,19 +244,17 @@ header{
 #skills p {
     margin-right: 40px;
 }
-
-#skills  #cercleExterne{
+#skills #cercleExterne{
     font-size: 15px;
-    min-width: 30% ;
+    width: 250%;
     height: 450px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     background:  linear-gradient(90deg,rgb(27, 27, 27),rgb(173, 122, 152),rgb(27, 27, 27));
-     
+    
 }
-
 #skills #cercleExterne ul,a{
     list-style-type: none;
     text-decoration: none;
@@ -304,7 +265,7 @@ header{
 #projects {
     width: 100%;
     display: flex;
-    margin: 7% 0;
+        margin: 7% 0;
 }
 
 #projects .contenu {
@@ -328,11 +289,6 @@ header{
     height: 250px;
      text-align: center;
     border-radius: 50%;
-}
-#projects .project img:hover{
-     width: 253px;
-    height: 253px;
-   transition: 0.6s ease;
 }
 #projects h1 {}
 
@@ -369,7 +325,7 @@ header{
     border-radius: 15px;
     background: linear-gradient(45deg,rgb(49, 42, 51),rgb(15, 0, 29));
 }
-.formulaire #form input,textarea{
+.formulaire .form input,textarea{
     display: block;
     width: 100%;
     outline: none;
@@ -381,27 +337,12 @@ header{
     background: rgb(199,179,206);
 
 }
-.formulaire #form input{
+.formulaire .form input{
     height: 30px;
     margin-bottom: 15px;
 }
-.formulaire #form textarea{
+.formulaire .form textarea{
     height: 90px;
-    margin-bottom: 20px;
-
-}
-/* je reprends ici */
- .formulaire #form #envoie{ 
-    width: 102%;
-    height: 40px; 
-    font-size: 25px;
-    font-weight: bold;
-}
- .formulaire #form #envoie:hover{ 
-    background: rgb(219, 170, 236);
-    transition:0.8s ease-out;
-    color:rgb(15, 0, 27);
-    font-size: 26px;
 }
 
 .contacts .localisation{
@@ -461,11 +402,6 @@ footer{
     text-decoration: none;
     color: rgb(199,179,206);
 }
-.reseauxF a:hover {
-    text-decoration:line-through;
-    color: rgb(204, 156, 248);  
-    transition: 0.8s ease-in-out; 
-}
 .ongletsF ul{
     list-style-type: none;
     text-align: justify;
@@ -474,11 +410,6 @@ footer{
 .ongletsF a{
     text-decoration: none;
     color: rgb(199,179,206);
-}
-.ongletsF a:hover {
-    text-decoration:line-through;
-    color: rgb(204, 156, 248);  
-    transition: 0.8s ease-in-out; 
 }
 footer .right{
     text-align: center;
@@ -502,7 +433,7 @@ footer{
 }  
 }
 
-/* 2 Screen de moins de 920px */
+/* 2 Screen de moins de 9 */
 @media screen and (max-width:920px){
 body{
 
@@ -527,42 +458,44 @@ footer{
         max-width: 100%;
         overflow-x: hidden; 
     }
-       .logo{ 
-        padding: 15px;
-        position: fixed;
-        z-index: 5;
-        visibility: visible;
-    }
- .btnResponsive{
-    margin-left: 9em;
-    display: flex;
-    font-size: 28px;
-}
 
   #navigation{
-    width: 88%;
+    width: 85%;
+    justify-content: space-between;
     display: flex;
-    height: 95vh;
-    border: none; 
-    z-index: 4;
-    backdrop-filter: blur(5px); 
-} 
-.navR{
-    visibility: hidden;
+    border: none;
+    margin: 0;
+    bottom: 90%;
+    padding: 5px;
+    backdrop-filter: blur(0px);
+    } 
+    #navigationResponsive{
+        display: block;
+        border: none;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100%;
+        max-width: 100%;
+        margin-right: -750px;
+        align-items: center;
+        backdrop-filter: blur(5px);
     }  
-
-.onglets{
-    margin: auto;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    .logo{
+        visibility: visible;
+    }
+.navBar .btnResponsive{
+    display: flex;
+    width: 100%;
+}
+   .onglets{
+    display: none;
 
    }
-.onglets a{
+    .onglets a{
         font-size: 40px;
     }
-.onglets a:hover{
+    .onglets a:hover{
         text-decoration: line-through;
         color: rgb(184, 92, 238);
         transition: 1s ;
@@ -570,6 +503,8 @@ footer{
     }
      #navigation .btnContacter{
        display: none;
+       
+
     }
    #home .article1{
     display: none;
