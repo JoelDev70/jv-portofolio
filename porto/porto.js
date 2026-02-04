@@ -25,13 +25,7 @@ if(!isDeleting){
 setTimeout(type,delay);
 } type();
 
-//Le bouton contact dynamique
-window.addEventListener("scroll",()=>{
-  // alert("Voulez-vous nous contacter");
-  console.log("je suis un contact");
-  
 
-});
 
 
 // le bouton responsive
