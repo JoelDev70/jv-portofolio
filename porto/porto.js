@@ -7,7 +7,6 @@
  let isDeleting = false;
  let currentPhrase = "";
  let delay = 100;
-
  function type(){
     currentPhrase = phrases[phraseIndex];
 if(!isDeleting){
@@ -26,12 +25,14 @@ if(!isDeleting){
 setTimeout(type,delay);
 } type();
 
+//Le bouton contact dynamique
+window.addEventListener("scroll",()=>{
+  // alert("Voulez-vous nous contacter");
+  console.log("je suis un contact");
+  
 
-// / window.addEventListener("load",() => {
-//   document.getElementById("loader").style.display = "none";
+});
 
-//   document.getElementById("bodyContent").style.display = "block";
-// });
 
 // le bouton responsive
 const navigation = document.getElementById("navigation");

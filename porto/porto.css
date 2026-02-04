@@ -3,49 +3,10 @@
     padding: 0;
     box-sizing: none;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        /* font-family:'Poppins', sans-serif; */
+        font-family:'Poppins', sans-serif;
 
 }
- /* #loader{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-.spinner{
-    border: 8px solid #ccc;
-    border-top: 8px solid #00ffcc;
-    border-radius: 50%;
-    width: 60%;
-    height: 60%;
-    animation: spin 5s linear;
-} 
-@keyframes spinner{
-    0%{
-        transform: rotate(10deg);}
-    20%{
-        transform: rotate(30deg);}
-   40%{
-        transform: rotate(100deg);}
-    60%{
-        transform: rotate(360deg);}
-} */
- .reveal{
-    /* opacity: 0.08; */
-    transform: translateY(50px);
-    /* transition: all 0.8s ease;    */
-}
 
- .reveal .active{
-    opacity: 2;
-    transform: translateY(0px);
-}
 body{
 
     color:rgb(199, 179, 206) ;
@@ -53,6 +14,7 @@ body{
     overflow-x: hidden;
     background:  rgb(15, 0, 27);
 }
+
 main{
 
    margin: 0 10%; 
@@ -93,7 +55,7 @@ header{
     border: 0.1px solid rgb(199, 179, 206);
     backdrop-filter: blur(1.5px);
     justify-content: center;
-
+    z-index: 1;
 }
 .onglets{
     display: flex;
@@ -211,6 +173,17 @@ header{
     color: aliceblue;
     
 }
+h1{
+    animation-name: monAnim;
+    animation-direction: reverse;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes monAnim{
+    50%{
+        color: rgb(220, 178, 221);
+    }
+}
 /* Section about */
 #about{
     width: 100%;
@@ -240,7 +213,6 @@ header{
 .contenu p{
     font-size: 20px;
     text-align: justify;
-    /* color: darkgray; */
     color:rgb(199, 179, 206) ;
 
 }
@@ -337,6 +309,64 @@ header{
 #projects h1 {}
 
 #projects p {
+}
+
+.bubble-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  width: 30px;
+  height: 30px;
+  background: rgba(245, 169, 252, 0.5);
+  border-radius: 50%;
+  animation: rise 10s infinite ease-in;
+}
+
+.bubble:nth-child(2) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-duration: 12s;
+}
+
+.bubble:nth-child(3) {
+  left: 40%;
+  animation-duration: 8s;
+}
+
+.bubble:nth-child(4) {
+  left: 60%;
+  width: 25px;
+  height: 25px;
+  animation-duration: 14s;
+}
+
+.bubble:nth-child(5) {
+  left: 80%;
+  animation-duration: 15s;
+}
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0) scale(2);
+    opacity: 0.4;
+  }
+100%{
+    transform: translateY(-120vh) scale(1.5);
+    opacity: 0.3;
+  }
 }
 
 /* Section contact */
@@ -447,7 +477,6 @@ footer{
     justify-content: space-around;
     align-items: center;
     padding-top: 40px;
-
 }
 .reseauFoot .copy{
         color: rgb(199,179,206);
@@ -498,7 +527,7 @@ footer .right{
 }
 footer{
     width: 100%;
-    height: 80vh;
+   height: 80vh;
 }  
 }
 
@@ -533,6 +562,16 @@ footer{
         z-index: 5;
         visibility: visible;
     }
+    .contenu p{
+        padding: 5px 3px;
+        border-radius: 15px;
+        background-color: linear-gradient((70, 57, 83),);  
+        box-shadow: 6px 1px 1px rgb(153, 108, 147);
+    }
+    .contacts{
+        margin-bottom: 5rem;
+    }
+
  .btnResponsive{
     margin-left: 9em;
     display: flex;
