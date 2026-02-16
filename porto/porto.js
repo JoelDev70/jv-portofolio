@@ -25,7 +25,13 @@ if(!isDeleting){
 setTimeout(type,delay);
 } type();
 
+//Le bouton contact dynamique
+window.addEventListener("scroll",()=>{
+  // alert("Voulez-vous nous contacter");
+  console.log("je suis un contact");
+  
 
+});
 
 
 // le bouton responsive
@@ -73,18 +79,18 @@ document.getElementById("form").addEventListener("submit", function (e) {
   document.getElementById("form").reset();
 });
 //ici l'affichage progressif des textes
-const reveals =  document.querySelectorAll(".reveal");
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('active');}
-  });
-},{
-  threshold: 0.2
-});
-reveals.forEach(reveal => {
-  observer.observe(reveal);
-});
+// const reveals =  document.querySelectorAll(".reveal");
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach(entry => {
+//     if(entry.isIntersecting){
+//       entry.target.classList.add('active');}
+//   });
+// },{
+//   threshold: 0.2
+// });
+// reveals.forEach(reveal => {
+//   observer.observe(reveal);
+// });
 
 
 
